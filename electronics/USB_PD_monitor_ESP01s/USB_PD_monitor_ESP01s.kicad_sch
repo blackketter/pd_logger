@@ -1,0 +1,103 @@
+(kicad_sch
+	(version 20250114)
+	(generator "eeschema")
+	(generator_version "9.0")
+	(uuid "84845a80-826d-4acb-a9cb-baabb3d2f315")
+	(paper "A4")
+	(title_block
+		(title "USB-C PD monitor")
+		(date "2025-08-02")
+		(rev "0.1")
+	)
+	(lib_symbols)
+	(sheet
+		(at 57.785 13.97)
+		(size 39.37 5.715)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "05018ad6-6821-4455-8190-504ffbfdf3fb")
+		(property "Sheetname" "current_sensing"
+			(at 57.785 13.2584 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "current_sensing.kicad_sch"
+			(at 57.785 20.2696 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "USB_PD_monitor_ESP01s"
+				(path "/84845a80-826d-4acb-a9cb-baabb3d2f315"
+					(page "3")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 20.32 13.97)
+		(size 34.925 5.08)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "075efd11-582e-4a6b-a9d9-42c7a278d728")
+		(property "Sheetname" "MCU"
+			(at 20.32 13.2584 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "MCU.kicad_sch"
+			(at 20.32 19.6346 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "USB_PD_monitor_ESP01s"
+				(path "/84845a80-826d-4acb-a9cb-baabb3d2f315"
+					(page "2")
+				)
+			)
+		)
+	)
+	(sheet_instances
+		(path "/"
+			(page "1")
+		)
+	)
+	(embedded_fonts no)
+)

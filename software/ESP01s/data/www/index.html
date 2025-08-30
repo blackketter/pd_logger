@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>PD-Logger · Status</title>
+  <link rel="stylesheet" href="/styles.css" />
+</head>
+<body>
+<header class="topbar">
+  <h1>PD-Logger · Status</h1>
+  <div class="topbar-actions">
+    <a class="btn" href="/graphics.html">Charts</a>
+  </div>
+</header>
+
+<main>
+  <div class="metrics">
+    <div class="metric-card">
+      <div class="metric-label">Voltage</div>
+      <div class="metric-value">
+        <span id="v">—</span><span class="unit">V</span>
+      </div>
+    </div>
+    <div class="metric-card">
+      <div class="metric-label">Current</div>
+      <div class="metric-value">
+        <span id="i">—</span><span class="unit">mA</span>
+      </div>
+    </div>
+    <div class="metric-card">
+      <div class="metric-label">Power</div>
+      <div class="metric-value">
+        <span id="p">—</span><span class="unit">W</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="status-line">
+    <span id="info"></span>
+  </div>
+</main>
+
+<script src="/app.js"></script>
+</body>
+</html>

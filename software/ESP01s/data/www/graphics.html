@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>PD-Logger · Charts</title>
+  <link rel="stylesheet" href="/styles.css" />
+  <link rel="stylesheet" href="/graphics.css" />
+</head>
+<body>
+<header class="topbar">
+  <h1>PD-Logger · Charts</h1>
+  <div class="topbar-actions">
+    <a class="btn alt" href="/">Home</a>
+    <a class="btn" href="/api/logs/download_all">Download</a>
+    <button id="btnClear" class="btn danger" type="button" title="Delete all stored data">Delete data</button>
+  </div>
+</header>
+
+<main>
+  <div class="toolbar">
+    <fieldset class="range-group" role="radiogroup" aria-label="Time range">
+      <input type="radio" id="r-max"   name="range" value="max">
+      <label class="range-pill" for="r-max">max</label>
+
+      <input type="radio" id="r-3600" name="range" value="3600">
+      <label class="range-pill" for="r-3600">1 h</label>
+
+      <input type="radio" id="r-1800" name="range" value="1800" checked>
+      <label class="range-pill" for="r-1800">30 min</label>
+
+      <input type="radio" id="r-600"  name="range" value="600">
+      <label class="range-pill" for="r-600">10 min</label>
+
+      <input type="radio" id="r-300"  name="range" value="300">
+      <label class="range-pill" for="r-300">5 min</label>
+    </fieldset>
+
+    <span id="info" class="meta"></span>
+  </div>
+
+  <section class="chart">
+    <h3>Voltage [V]</h3>
+    <canvas id="cvV"></canvas>
+  </section>
+
+  <section class="chart">
+    <h3>Current [mA]</h3>
+    <canvas id="cvI"></canvas>
+  </section>
+
+  <section class="chart">
+    <h3>Power [W]</h3>
+    <canvas id="cvP"></canvas>
+  </section>
+</main>
+
+<script src="/graphics.js"></script>
+</body>
+</html>

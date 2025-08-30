@@ -1,0 +1,129 @@
+:root {
+  --bg: #fff;
+  --fg: #111;
+  --muted: #666;
+  --card: #f6f7f8;
+  --accent: #0b5fff;
+  --radius: 14px;
+}
+
+* { box-sizing: border-box; }
+
+html, body {
+  margin: 0;
+  padding: 0;
+  background: var(--bg);
+  color: var(--fg);
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, Ubuntu, Cantarell, "Noto Sans", Arial, sans-serif;
+}
+
+.topbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 16px;
+  border-bottom: 1px solid #eee;
+}
+.topbar h1 {
+  margin: 0;
+  font-size: 20px;
+  letter-spacing: 0.2px;
+}
+.topbar-actions {
+  display: flex;
+  gap: 8px;
+}
+.btn {
+  display: inline-block;
+  padding: 8px 12px;
+  background: var(--accent);
+  color: #fff;
+  border-radius: 10px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+main {
+  padding: 16px;
+}
+
+.metrics {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 12px;
+}
+
+.metric-card {
+  background: var(--card);
+  border-radius: var(--radius);
+  padding: 16px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+}
+
+.metric-label {
+  font-size: 14px;
+  color: var(--muted);
+  margin-bottom: 6px;
+}
+
+.metric-value {
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 1.1;
+}
+.metric-value .unit {
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--muted);
+  margin-left: 6px;
+}
+
+.status-line {
+  display: flex;
+  gap: 18px;
+  align-items: baseline;
+  margin-top: 16px;
+  color: var(--muted);
+  font-size: 14px;
+}
+.status-line .dim { color: var(--muted); }
+
+.metrics {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 12px;
+}
+
+.metric-card {
+  background: var(--card);
+  border-radius: var(--radius);
+  padding: 16px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+}
+
+.metric-label {
+  font-size: 14px;
+  color: var(--muted);
+  margin-bottom: 6px;
+}
+
+.metric-value {
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 1.1;
+}
+
+.metric-value .unit {
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--muted);
+  margin-left: 6px;
+}
+
+.status-line {
+  margin-top: 16px;
+  font-size: 14px;
+  color: var(--muted);
+}

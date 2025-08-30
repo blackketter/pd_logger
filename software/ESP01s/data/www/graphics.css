@@ -1,0 +1,77 @@
+/* Toolbar and layout */
+.toolbar {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  align-items: center;
+  margin: 12px 0 8px;
+}
+
+.btn.danger { background:#ef4444; }
+.btn.danger:hover { background:#dc2626; }
+
+/* Radio-as-button styling */
+.range-group {
+  display: inline-flex;
+  gap: 6px;
+  align-items: center;
+  flex-wrap: wrap;
+  border: 0;
+  padding: 0;
+  margin: 0;
+}
+.range-group input[type="radio"] {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+  width: 0;
+  height: 0;
+}
+.range-pill {
+  display: inline-block;
+  padding: 6px 10px;
+  border-radius: var(--radius);
+  background: #e5e7eb;
+  color: #111;
+  font-size: 14px;
+  line-height: 1;
+  user-select: none;
+  cursor: pointer;
+  border: 1px solid #d1d5db;
+}
+
+.range-group input[type="radio"]:checked + label.range-pill {
+  background: #2563eb;      /* satten Blauton nehmen */
+  color: #fff;              /* gut lesbarer Kontrast */
+  border-color: #2563eb;
+  box-shadow: 0 0 0 2px rgba(37, 99, 235, 0.15) inset; /* dezenter Fokusrahmen */
+}
+
+
+
+/* Charts */
+.chart {
+  background: var(--card);
+  border-radius: var(--radius);
+  padding: 12px;
+  box-shadow: 0 1px 3px rgba(0,0,0,.05);
+  margin-top: 12px;
+}
+.chart h3 {
+  margin: 0 0 6px;
+  font-size: 16px;
+  color: var(--muted);
+  font-weight: 600;
+}
+canvas {
+  width: 100%;
+  height: 220px;
+  display: block;
+}
+
+/* Meta info */
+.meta {
+  margin-top: 6px;
+  color: var(--muted);
+  font-size: 13px;
+}
