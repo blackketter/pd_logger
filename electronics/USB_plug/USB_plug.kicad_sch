@@ -1311,6 +1311,18 @@
 			(embedded_fonts no)
 		)
 	)
+	(text "USB-C plug breakout"
+		(exclude_from_sim no)
+		(at 148.336 30.988 0)
+		(effects
+			(font
+				(size 5.08 5.08)
+				(thickness 1.016)
+				(bold yes)
+			)
+		)
+		(uuid "1f1652f0-c1fd-4af0-9ea6-b4348d136cac")
+	)
 	(text "D+"
 		(exclude_from_sim no)
 		(at 120.904 84.074 0)

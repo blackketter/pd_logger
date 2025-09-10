@@ -81,6 +81,7 @@ void setup() {
   if (!sensor.begin(Wire)) {
     Serial.println(F("INA219 nicht gefunden – Verkabelung/Adresse prüfen!"));
   }
+  sensor.setShuntCorrection(INA219_CORR);
   Wire.setClock(100000);
 
   if (!logger.begin(LOG_DIR, LOG_PREFIX, LOG_EXT, MAX_LOG_FILE_SIZE, MAX_LOG_FILES)) {

@@ -18,19 +18,7 @@ static const size_t MAX_LOG_FILES     = 4;         // max. 4 Dateien (gesamt ~64
 // ==== NTP / Zeitzone ====
 static const char* TZ_EU_BERLIN = "CET-1CEST,M3.5.0,M10.5.0/3";
 
-/*
-Optional: dynamische Anpassung in setup(), falls du den Platz automatisch
-an das tatsächliche LittleFS-Volume anpassen willst. Beispiel:
-
-  FSInfo fs;
-  LittleFS.info(fs);
-  // nutze 60% des verfügbaren FS für Logs, aber clamp auf sinnvolle Grenzen
-  size_t budget = (size_t)(fs.totalBytes * 0.60f);
-  size_t fileSize = 16 * 1024; // Startwert
-  size_t fileCount = max<size_t>(2, min<size_t>(10, budget / fileSize));
-
-  // Dann DataLogger so initialisieren:
-  logger.begin(LOG_DIR, LOG_PREFIX, LOG_EXT, fileSize, fileCount);
-
-(Anmerkung: Für ESP-01S sind die obigen Konstanten i. d. R. schon passend.)
-*/
+// ==== INA219-Korrektur (Adafruit-Referenz 100 mΩ vs. real 50 mΩ) ====
+static const float SHUNT_MILLIOHM      = 50.0f;   // deine Platine
+static const float INA219_REF_MILLIOHM = 100.0f;  // setCalibration_32V_2A() Annahme
+static const float INA219_CORR = INA219_REF_MILLIOHM / SHUNT_MILLIOHM; // = 2.0f

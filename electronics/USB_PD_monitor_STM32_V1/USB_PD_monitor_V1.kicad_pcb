@@ -8914,7 +8914,7 @@
 		)
 	)
 	(gr_text "+5V"
-		(at 114.05 66.94 0)
+		(at 114.46 74.43 0)
 		(layer "B.SilkS")
 		(uuid "2acb2db3-2b1e-4f67-b88b-f91d2f473f53")
 		(effects
@@ -8926,7 +8926,7 @@
 		)
 	)
 	(gr_text "GND"
-		(at 114.14 74.53 0)
+		(at 114.06 66.9 0)
 		(layer "B.SilkS")
 		(uuid "7e0d2e3c-408f-4a24-af23-652ce913a714")
 		(effects
@@ -8938,7 +8938,7 @@
 		)
 	)
 	(gr_text "DIO"
-		(at 114.07 69.42 0)
+		(at 114.1 71.99 0)
 		(layer "B.SilkS")
 		(uuid "a834d770-5aff-4b36-978f-02041aa20129")
 		(effects
@@ -8950,7 +8950,7 @@
 		)
 	)
 	(gr_text "CLK"
-		(at 114.11 71.94 0)
+		(at 114.05 69.38 0)
 		(layer "B.SilkS")
 		(uuid "f941d388-0379-4724-adc1-33c12775812b")
 		(effects

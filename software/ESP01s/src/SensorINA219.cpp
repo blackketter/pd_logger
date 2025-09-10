@@ -1,4 +1,5 @@
 #include "SensorINA219.h"
+#include "Config.h"
 #include <math.h>
 
 bool SensorINA219::begin(TwoWire& w) {
@@ -33,8 +34,8 @@ bool SensorINA219::read(Measurement& m) {
     if (ok) {
       m.shuntmV = shuntmV;
       m.busV    = busV;
-      m.currmA  = currmA;
-      m.powermW = powermW;
+      m.currmA  = currmA * _corr;   // Korrektur anwenden
+      m.powermW = powermW * _corr;  // Leistung skaliert linear mit Strom
       m.loadV   = m.busV + (m.shuntmV / 1000.0f);
       return true;
     }
